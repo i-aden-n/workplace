@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'm/css/a_null.css' %}">
+    <link rel="stylesheet" href="{% static 'm/css/base.css' %}">
+    {% block style_link %}{% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <nav class="header__nav nav">
+                    {% for m in menu %}
+                        <a class="nav__link _hoover" href="{% url m.url %}" class="nav__link">{{ m.name }}</a>
+                    {% endfor %}
+                    {% if is_auth %}<a class="nav__link _hoover" href="{{ request.user.get_absolute_url }}">Profile</a>{% else %}<a class="nav__link _hoover" href="{% url 'login' %}">Log In</a>{% endif %}
+                    {% if is_super %}<a class="nav__link _hoover" href="{% url 'remote' %}">remote</a>{% endif %}
+                </nav>
+            </div>
+        </div>
+    </header>
+    <hr>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

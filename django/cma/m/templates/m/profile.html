@@ -1,0 +1,7 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block style_link %}{% endblock %}
+{% block content %}
+<h1 style="font-size: 3rem; font-weight: 900;">{{user.username}}'s Profile</h1>
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

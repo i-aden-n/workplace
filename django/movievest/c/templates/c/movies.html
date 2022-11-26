@@ -1,0 +1,18 @@
+{% extends 'c/base.html' %}
+{% load static %}
+{% block templ_style %}<link rel="stylesheet" href="{% static 'c/css/movies.css' %}">{% endblock %}
+{% block content %}
+    <section class="movies container">
+        <h1 class="movies__title t2">All Movies</h1>
+        <div class="movies__body">
+            {% for m in movies %}
+            <div class="movies__item item">
+                <a class="item__title" href="{{ m.get_manage_url }}">{{ m.name }}</a>
+                <div class="item__actions">
+                    <a href="{{ m.get_add_url }}" class="item__add">Add</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block style_link %}{% endblock %}
+{% block content %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table>
+            {% for f in form %}
+            <tr>
+                <td>{{ f.student }}</td>
+                <td>{{ f.grammar }}</td>
+                <td>{{ f.writing }}</td>
+                <td>{{ f.listening }}</td>
+                <td>{{ f.speaking }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <button type="submit">submit</button>
+    </form>
+    {{ message }}
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+.container {
+    max-width: 940px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--main-site-color);
+    color: white;
+    padding: 1.5rem 0;
+    &__wrapper {
+
+    }
+    
+    &__nav {
+    }
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    &__link {
+        color: white;
+        display: block;
+        font-size: 2rem;
+        margin: 0 2rem 0 0;
+        text-transform: uppercase;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}

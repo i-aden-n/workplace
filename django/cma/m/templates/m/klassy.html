@@ -1,0 +1,17 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block style_link %}<link rel="stylesheet" href="{% static 'm/css/klassy.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <section class="klassy">
+        {% for k in klassy %}
+        <div class="klassy__item item">
+            <a href="{{ k.get_absolute_url }}" class="item__klass">{{ k }} Level: {{ k.level }}</a>
+            {% for user in k.users.all %}
+            <a href="{{ user.get_absolute_url }}" class="item__line">{{ user.username }}</a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}

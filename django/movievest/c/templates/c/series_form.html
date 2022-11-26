@@ -1,0 +1,33 @@
+{% extends 'c/base.html' %}
+{% load static %}
+{% block templ_style %}<link rel="stylesheet" href="{% static 'c/css/series_form.css' %}">{% endblock %}
+{% block content %}
+<form class="form container" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for f in form %}
+    {% if f != form.path %}
+        <div class="form__field field">
+            <div class="field__body">
+                <label class="field__label" for="{{ f.id_for_label }}">{{ f.label }}</label>
+                <p>{{ f }}</p>
+            </div>
+            <p class="field__errors">{{ f.errors }}</p>
+        </div>
+    {% endif %}
+    {% endfor %}
+    <div class="form__field file">
+            <label class="file__lablel">
+                <h2 class="file__title">Drag and Drop or Click on this Area</h2>
+                <h2 class="file__choosed" id="file_name"></h2>  
+                {{ form.path }}
+            </label>
+    </div>
+    {% if object %}
+        <div class="form__current current">
+            Current: <a href="{{ object.path.url }}" class="current__link">{{ object.path }}</a>
+        </div>
+    {% endif %}
+    <button class="form__submit" type="submit">submit</button>
+</form>
+{% endblock %}
+{% block templ_script %}<script src="{% static 'c/js/series__form.js' %}"></script>{% endblock %}

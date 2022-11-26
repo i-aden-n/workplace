@@ -1,0 +1,32 @@
+.form {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1rem 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+.form__input {
+	width: 100%;
+}
+.form__input input {
+	padding: 0.5rem;
+	font-size: 1.5rem;
+}
+.form__label {
+	font-size: 1.5rem;
+	margin: 0 0 0.5rem 0;
+	display: block;
+}
+.form__btn {
+	background-color: var(--main-site-color);
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	text-transform: uppercase;
+	-webkit-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+.form__btn:hover {
+	background-color: #e1e1e1;
+	color: #000;
+}

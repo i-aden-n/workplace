@@ -1,0 +1,22 @@
+.movies__body {
+  width: 100%;
+  border: 2px var(--site-color-darker) solid;
+  border: 1px solid var(--site-color-second);
+}
+.movies__title {
+  font-weight: 700;
+  margin: 0 0 2rem 0;
+}
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.item:nth-child(odd) {
+  background-color: var(--site-color-darker);
+}

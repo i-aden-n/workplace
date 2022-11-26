@@ -1,0 +1,29 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block style_link %}{% endblock %}
+{% block content %}
+<div class="container">
+    <p>name: {{ klass.name }}</p>
+    <p>slug: {{ klass.slug }}</p>
+    <p>level: {{ klass.level }}</p>
+    
+    <p>This is last exam: {{ last_exam.create_time | date:'Y-m-d' }} | <a href="{{ last_exam.get_editing_url }}">Edit</a></p>
+    <table>
+        <tr>
+            <th>student</th>
+            <th>grammar</th>
+            <th>writing</th>
+            <th>listening</th>
+            <th>speaking</th>
+        </tr>
+        {% for line in last_exam.table_lines.all %}
+        <tr>
+            <td>{{ line.student }}</td>
+            <td>{{ line.grammar }}</td>
+            <td>{{ line.writing }}</td>
+            <td>{{ line.speaking }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

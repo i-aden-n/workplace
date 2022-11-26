@@ -1,0 +1,23 @@
+.item {
+	margin: 1rem 0 0 0;
+	border: 4px #0098b6 solid;
+	border-radius: 1rem;
+	overflow: hidden;
+}
+.item__klass {
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	background-color: #00d4ff;
+	display: block;
+}
+.item__line {
+	padding: 1rem;
+	display: block;
+	text-transform: capitalize;
+	font-size: 1.5rem;
+}
+.item__line:nth-child(odd) {
+	background-color: #efefef;
+}

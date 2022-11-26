@@ -1,0 +1,27 @@
+.movie__title {
+  font-weight: 900;
+}
+
+.season {
+  margin: 2rem 0 0 0;
+}
+.season__title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.season__body {
+  margin: 1rem 0 0 0;
+  border: 1px solid var(--site-color-second);
+}
+.serial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+}
+.serial:nth-child(odd) {
+  background-color: var(--site-color-darker);
+}

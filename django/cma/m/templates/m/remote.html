@@ -1,0 +1,12 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block style_link %} <link rel="stylesheet" href="{% static 'm/css/remote.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <section class="options">
+        {% for o in options %}
+            <div class="options__item"><a href="{% url o.url %}"><h2>{{ o.name }}</h2></a></div>
+        {% endfor %}
+    </section>
+</div>
+{% endblock %}

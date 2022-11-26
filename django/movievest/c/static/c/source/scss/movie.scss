@@ -1,0 +1,40 @@
+.movie {
+
+    &__season {
+    }
+
+    &__title {
+        font-weight: 900;
+    }
+}
+
+.season {
+    margin: 2rem 0 0 0;
+    &__title {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__body {
+        margin: 1rem 0 0 0;
+        border: 1px solid var(--site-color-second);
+    }
+
+    &__seial {
+    }
+}
+.serial {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    &__title {
+        
+    }
+
+    &__edit {
+    }
+
+    &:nth-child(odd) {
+        background-color: var(--site-color-darker);
+    }
+}

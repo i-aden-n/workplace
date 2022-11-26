@@ -1,0 +1,21 @@
+{% extends 'c/base.html' %}
+{% load static %}
+{% block templ_style %}<link rel="stylesheet" href="{% static 'c/css/movie.css' %}">{% endblock %}
+{% block content %}
+<section class="movie container">
+    <h1 class="movie__title t2">{{ title }} | <a href="{{ series.0.0.movie.get_add_url }}">Add</a></h1>
+    {% for season in series %}
+    <div class="movie__season season">
+        <h2 class="season__title t1">season {{ season.0.season }}</h2>
+        <div class="season__body">
+            {% for s in season %}
+            <div class="season__seial serial">
+                <a class="serial__title" href="{{ s.get_absolute_url }}">{{ s.serial }} serial</a>
+                <a class="serial__edit" href="{{ s.get_edit_url }}">Edit</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

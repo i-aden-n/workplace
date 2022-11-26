@@ -1,0 +1,48 @@
+{
+	"Jinja variable" : {
+		"prefix": "jnjvar",
+		"body": [
+			"{{ $1 }}"
+		]
+	},
+	"Jinja tag" : {
+		"prefix": "jnjtag",
+		"body": [
+			"{% $1 %}"
+		]
+	},
+	"Jinja if line": {
+		"prefix": "jnjifline",
+		"body": [
+			"{% if $1 %}$2{% endif %}"
+		]
+	},
+	"Jinja block" : {
+		"prefix": "jnjblock",
+		"body": [
+			"{% block $1 %}$2{% endblock %}"
+		]
+	},
+	"Jinja for" : {
+		"prefix": "jnjfor",
+		"body": [
+			"{% for $1 in $2 %}$3",
+			"{% endfor %}"
+		]
+	},
+	"Jinja if" : {
+		"prefix": "jnjif",
+		"body": [
+			"{% if $1 %}$2",
+			"{% endif %}"
+		]
+	},
+	"vue template": {
+		"prefix": "vue-template",
+		"body": [
+			"<template $1>",
+			"$2",
+			"</template>"
+		]
+	}
+}

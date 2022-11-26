@@ -1,0 +1,44 @@
+.header {
+    background-color: var(--site-color-darker);
+    margin: 0 0 2rem 0;
+    &__body {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__nav {
+    }
+}
+.nav {
+
+    &__item {
+        font-size: 1.5rem;
+        text-transform: lowercase;
+        margin: 0 1rem 0 0;
+        display: inline-block;
+        transition: .3s ease-in-out;
+        &:hover {
+            color: var(--site-color-second);
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+.footer {
+    width: 100%;
+    background-color: var(--site-color-darker);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin: 2rem 0 0 0;
+    &__item {
+        display: block;
+        margin: 1rem 0 0 0;
+        font-size: 1.5rem;
+
+        &:first-child{
+            margin: 0;
+        }
+    }
+}

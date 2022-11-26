@@ -1,0 +1,7 @@
+{% extends 'm/base.html' %}
+{% load static %}
+{% block templ_style %}{% endblock %}
+{% block content %}
+<h1>Watch {{ series.movie.name }} season {{ series.season }}, serail {{ series.serial }}</h1>
+<video src="{{ series.path.url }}" controls ></video>
+{% endblock %}

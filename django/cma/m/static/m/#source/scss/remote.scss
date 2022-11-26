@@ -1,0 +1,37 @@
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+		&__item {
+            width: 100%;
+            border: 1px solid var(--main-site-color);
+            position: relative;
+            transition: .5s ease;
+
+            & a{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                background-color: #e1e1e1;
+                color: var(--main-site-color);
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding: 50% 0 0 0;
+            }
+
+            &:hover {
+                box-shadow: 0 0 20px 4px rgba($color: #000000, $alpha: .25);
+            }
+		}
+}

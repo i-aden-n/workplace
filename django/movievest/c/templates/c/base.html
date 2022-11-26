@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'c/css/null.css' %}">
+    <link rel="stylesheet" href="{% static 'c/css/base.css' %}">
+    {% block templ_style %}{% endblock %}
+    {% block templ_script %}{% endblock %}
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__body container">
+            <nav class="header__nav nav">
+                {% for o in options %}
+                <a class="nav__item" href="{% url o.url %}">{{ o.name }}</a>
+                {% endfor %}
+            </nav>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="footer__body container">
+            {% for o in options %}
+            <a class="footer__item" href="{% url o.url %}">{{ o.name }}</a>
+            {% endfor %}
+        </div>
+    </footer>
+</body>
+</html>
